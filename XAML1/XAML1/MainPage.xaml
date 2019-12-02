@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="XAML1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:XAML1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Row 0, Column 0-->
+        <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Background="Black">
+            <Image Source="Images/QuizMaster.png" 
+                   Width="400" Height="200"
+                   HorizontalAlignment="Left"/>
+            <TextBlock Text="YES" Foreground="White"
+                       FontSize="75"
+                       HorizontalAlignment="Center"/>
+        </StackPanel>
+
+        <!-- Row 1, Column 0-->
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0">
+            <Button Content="Add Thing"
+                    Click="AddThingClick"/>
+            <ListBox x:Name="Names">
+                <ListBoxItem>Pelle</ListBoxItem>
+                <ListBoxItem>Lisa</ListBoxItem>
+                <ListBoxItem>Stina</ListBoxItem>
+            </ListBox>
+        </StackPanel>
+    </Grid>
+    
+</Page>
